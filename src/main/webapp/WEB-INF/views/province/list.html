@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{province/create}">Create</a>
+<table>
+    <tr>
+        <th>No.</th>
+        <th>Name</th>
+    </tr>
+    <tr th:each="pr, element : ${listProvince}">
+        <td th:text="${element.index} + 1"></td>
+        <td th:text="${pr.name}"></td>
+    </tr>
+</table>
+</body>
+</html>
